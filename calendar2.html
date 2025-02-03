@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Calendar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #FFFEEA;
+        }
+
+        .box
+        {
+              margin : 120px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFEEA;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            background-color: #CFDDBC;
+        }
+
+        .user-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e8f0eb;
+        }
+
+        .welcome {
+            margin: 20px 0;
+        }
+
+        .welcome h1 {
+            color: #2d5d4e;
+            font-size: 24px;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            margin-top: 20px;
+            float:right;
+        }
+
+        .day-header {
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .calendar-day {
+            min-height: 100px;
+            padding: 10px;
+            text-align: right;
+           
+            background-color:#CFDDBC;
+            border: 2px ;
+
+        }
+
+        .event {
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .event.blue {
+            background-color: #e3e9ff;
+            color: #4a5ff7;
+        }
+
+        .event.red {
+            background-color: #ffe3e3;
+            color: #f74a4a;
+        }
+
+        .event.green {
+            background-color: #e3ffe3;
+            color: #4af74a;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 60px;
+            background-color: #CFDDBC;
+            padding:30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;;
+            float: left;
+           
+        }
+
+        .sidebar-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #000000;
+            border-radius: 4px;
+            
+            
+        }
+
+        .date-number {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-icon"></div>
+        <div class="sidebar-icon"></div>
+        <div class="sidebar-icon"></div>
+        <div class="sidebar-icon"></div>
+        <div class="sidebar-icon"></div>
+        <div class="sidebar-icon"></div>
+    </div>
+    <div class="container">
+        <header class="header">
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search">
+            </div>
+            <div class="user-section">
+                <div class="notifications">🔔</div>
+                <div class="user-avatar"></div>
+                <div>Dr. Kim</div>
+            </div>
+        </header>
+        <div class="welcome">
+            <h1>What's New Dr. Kim!</h1>
+        </div>
+        <div class = "box">
+        <div class="calendar">
+            <div class="day-header">Sun</div>
+            <div class="day-header">Mon</div>
+            <div class="day-header">Tue</div>
+            <div class="day-header">Wed</div>
+            <div class="day-header">Thu</div>
+            <div class="day-header">Fri</div>
+            <div class="day-header">Sat</div>
+            
+            <div class="calendar-day"><div class="date-number">1</div></div>
+            <div class="calendar-day"><div class="date-number">2</div></div>
+            <div class="calendar-day"><div class="date-number">3</div></div>
+            <div class="calendar-day"><div class="date-number">4</div></div>
+            <div class="calendar-day"><div class="date-number">5</div></div>
+            <div class="calendar-day"><div class="date-number">6</div></div>
+            <div class="calendar-day"><div class="date-number">7</div></div>
+            
+            <div class="calendar-day">
+                <div class="date-number">8</div>
+            </div>
+            <div class="calendar-day">
+                <div class="date-number">9</div>
+            </div>
+            <div class="calendar-day">
+                <div class="date-number">10</div>
+                <div class="event blue">
+                    <div>Stacy Mitchell</div>
+                    <div>Surgery</div>
+                </div>
+            </div>
+            <div class="calendar-day"><div class="date-number">11</div></div>
+            <div class="calendar-day"><div class="date-number">12</div></div>
+            <div class="calendar-day">
+                <div class="date-number">13</div>
+                <div class="event red">
+                    <div>Amy Dunham</div>
+                    <div>Weekly Visit</div>
+                </div>
+            </div>
+            <div class="calendar-day"><div class="date-number">14</div></div>
+            
+            <div class="calendar-day">
+                <div class="date-number">15</div>
+            </div>
+            <div class="calendar-day">
+                <div class="date-number">16</div>
+                <div class="event green">
+                    <div>Amy Dunham</div>
+                    <div>Regular Checkup</div>
+                </div>
+            </div>
+            <div class="calendar-day"><div class="date-number">17</div></div>
+            <div class="calendar-day"><div class="date-number">18</div></div>
+            <div class="calendar-day"><div class="date-number">19</div></div>
+            <div class="calendar-day"><div class="date-number">20</div></div>
+            <div class="calendar-day"><div class="date-number">21</div></div>
+            
+            <div class="calendar-day"><div class="date-number">22</div></div>
+            <div class="calendar-day">
+                <div class="date-number">23</div>
+                <div class="event green">
+                    <div>Amy Dunham</div>
+                    <div>Consultation</div>
+                </div>
+            </div>
+            <div class="calendar-day"><div class="date-number">24</div></div>
+            <div class="calendar-day">
+                <div class="date-number">25</div>
+                <div class="event red">
+                    <div>Amy Dunham</div>
+                    <div>Regular Check-up</div>
+                </div>
+            </div>
+            <div class="calendar-day"><div class="date-number">26</div></div>
+            <div class="calendar-day"><div class="date-number">27</div></div>
+            <div class="calendar-day"><div class="date-number">28</div></div>
+            
+            <div class="calendar-day"><div class="date-number">29</div></div>
+            <div class="calendar-day">
+                <div class="date-number">30</div>
+                <div class="event orange">
+                    <div>Amy Dunham</div>
+                    <div>Diagnosis</div>
+                </div>
+            </div>
+            <div class="calendar-day"><div class="date-number">31</div></div>
+            <div class="calendar-day"></div>
+            <div class="calendar-day"></div>
+            <div class="calendar-day"></div>
+            <div class="calendar-day"></div>
+        </div>
+       </div>
+    </div>
+</body>
+</html>
