@@ -1,0 +1,120 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-logo"></div>
+            <nav class="sidebar-nav">
+                <div class="nav-item active">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </nav>
+            <div class="nav-item logout" style="margin-top: auto;">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-bell"></i>
+                    <img src="profile.png" alt="Dr. Kim" class="profile-img">
+                    <span>Dr. Kim</span>
+                </div>
+            </header>
+
+            <div class="content-grid">
+                <!-- Stats Card -->
+                <div class="stats-card">
+                    <h2>Visits for Today</h2>
+                    <div class="total-visits">104</div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">64</div>
+                            <div class="stat-label">New Patients</div>
+                            <div class="stat-change positive">+5%</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">64</div>
+                            <div class="stat-label">Old Patients</div>
+                            <div class="stat-change negative">-20%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patient List -->
+                <div class="patient-list">
+                    <div class="section-header">
+                        <h2>Patient List</h2>
+                        <div class="dropdown">
+                            Today <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="patient-cards">
+                        <!-- Repeat for each patient -->
+                        <div class="patient-card">
+                            <div class="patient-info">
+                                <div class="patient-avatar"></div>
+                                <div>
+                                    <div class="patient-name">Stacy Mitchell</div>
+                                    <div class="visit-type">Weekly Visit</div>
+                                </div>
+                            </div>
+                            <div class="appointment-time">10:00 AM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar Section -->
+                <div class="calendar-section">
+                    <div class="section-header">
+                        <h2>Calendar</h2>
+                        <div>November 2023</div>
+                    </div>
+                    <div class="calendar-grid">
+                        <!-- Calendar days -->
+                    </div>
+
+                    <div class="upcoming-events">
+                        <div class="section-header">
+                            <h2>Upcoming</h2>
+                            <a href="#">View All</a>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-title">Monthly doctor's meet</div>
+                            <div class="event-time">4 April, 2024 | 04:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>
